@@ -20,7 +20,8 @@ var request = http.get("http://teamtreehouse.com/" + username + ".json", functio
 	// Parse the data
 	response.on('end', function(){
 		var profile = JSON.parse(body);
-		console.dir(profile);
+		// Print the data out
+		printMessage(username, profile.badges.length, profile.points.JavaScript);
 	});
 });
 
@@ -30,4 +31,3 @@ request.on("error", function(error){
 
 
 	
-	// Print the data out

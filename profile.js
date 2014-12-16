@@ -17,7 +17,6 @@ function printError(error){
 function get(username){
 	// Connect to the API URL (http://teamtreehouse.com/username.json)
 	var request = http.get("http://teamtreehouse.com/" + username + ".json", function(response){
-		console.log(response.statusCode);
 		var body = ""
 		// Read the data
 		response.on('data', function(chunk){
